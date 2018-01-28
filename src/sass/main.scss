@@ -1,6 +1,12 @@
 @import 'variables';
+@import 'roboto';
+@import 'typography';
+@import 'button';
 
 html, body {
   background-color: $bg-color;
+}
+
+* {
   color: $text-color;
 }
