@@ -38,10 +38,16 @@ gulp.task('serve', function () {
   })
 })
 
+gulp.task('assets', function () {
+  gulp.src('./src/assets/*')
+    .pipe(gulp.dest('./dist/assets'))
+})
+
 gulp.task('watch', function () {
   gulp.watch('./src/sass/**', ['sass'])
   gulp.watch('./dist/*.css', ['html'])
   gulp.watch('./src/html/*.html', ['html'])
+  gulp.watch('./src/assets/**', ['assets'])
 })
 
-gulp.task('default', ['sass', 'html', 'watch', 'serve'])
+gulp.task('default', ['assets', 'sass', 'html', 'watch', 'serve'])

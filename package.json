@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel index.js"
+    "start": "gulp"
   },
   "license": "MIT",
   "devDependencies": {
@@ -14,5 +13,8 @@
     "gulp-inject-string": "^1.1.1",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "materialize-css": "^0.100.2"
   }
 }

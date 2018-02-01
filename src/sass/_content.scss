@@ -1,0 +1,16 @@
+.content-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  
+  .vertical {
+    align-items: initial;
+    flex-direction: column;
+  }
+
+  .tight {
+    justify-content: center;
+  }
+}

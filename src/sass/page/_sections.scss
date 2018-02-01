@@ -1,0 +1,14 @@
+.intro-section {
+  @media #{$medium-and-down} {
+    .vertical {
+      align-items: center;
+    }
+  }
+
+  .subtitle {
+    margin-top: 1em;
+  }
+  .google-play-btn {
+    margin-top: 8em;
+  }
+}

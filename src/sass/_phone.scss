@@ -1,0 +1,38 @@
+.phone {
+  width: $phone-width;
+  display: flex;
+  flex-direction: column;
+
+  * {
+    margin: 0;
+    border: 0;
+    box-sizing: content-box;
+  }
+
+  .top, .bottom {
+    width: 100%;
+    height: $phone-screen-height / 10;
+    
+    background-color: $phone-color;
+  }
+
+  .top {
+    border-top-left-radius: $phone-border-radius;
+    border-top-right-radius: $phone-border-radius;
+  }
+
+  .bottom {
+    border-bottom-left-radius: $phone-border-radius;
+    border-bottom-right-radius: $phone-border-radius;
+  }
+
+  .screen {
+    width: $phone-screen-width;
+    height: $phone-screen-height;
+
+    border-color: $phone-color;
+    border-style: solid;
+    border-left-width: $phone-screen-border;
+    border-right-width: $phone-screen-border;
+  }
+}

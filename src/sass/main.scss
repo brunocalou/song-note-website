@@ -1,12 +1,14 @@
+@import 'node_modules/materialize-css/sass/components/color';
+@import 'node_modules/materialize-css/sass/components/variables';
+@import 'node_modules/materialize-css/sass/components/typography';
+@import 'node_modules/materialize-css/sass/components/global';
+
 @import 'variables';
-@import 'roboto';
-@import 'typography';
 @import 'button';
+@import 'phone';
+@import 'content';
+@import 'navbar';
+@import 'section';
+@import 'general';
 
-html, body {
-  background-color: $bg-color;
-}
-
-* {
-  color: $text-color;
-}
+@import './page/sections';
