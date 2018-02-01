@@ -1,11 +1,10 @@
 section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
   width: 95%;
-  min-height: 100vh;
-
-  margin: 0 auto;
-
-  padding-top: $section-vertical-padding  + $navbar-height;
-  padding-bottom: $section-vertical-padding;
 
   @media #{$medium-and-up} {
     width: 90%;
@@ -13,5 +12,23 @@ section {
 
   @media #{$large-and-up} {
     width: 80%;
+  }
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding-top: $section-vertical-padding  + $navbar-height;
+  padding-bottom: $section-vertical-padding;
+
+  text-align: center;
+
+  .subtitle {
+    &, * {
+      font-weight: 300;
+    }
+
+    margin-top: 1em;
+    margin-bottom: 2.5em;
   }
 }

@@ -35,4 +35,17 @@
     border-left-width: $phone-screen-border;
     border-right-width: $phone-screen-border;
   }
+
+  &.small {
+    width: $small-phone-width;
+
+    .top, .bottom {
+      height: $small-phone-screen-height / 10;
+    }
+
+    .screen {
+      width: $small-phone-screen-width;
+      height: $small-phone-screen-height;
+    }
+  }
 }

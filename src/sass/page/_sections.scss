@@ -1,4 +1,6 @@
 .intro-section {
+  text-align: left;
+  
   @media #{$medium-and-down} {
     .vertical {
       align-items: center;
@@ -10,6 +12,6 @@
     margin-top: 1em;
   }
   .google-play-btn {
-    margin-top: 8em;
+    margin-top: 5em;
   }
 }

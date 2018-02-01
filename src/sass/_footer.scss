@@ -1,0 +1,9 @@
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  margin-top: $footer-vertical-margin;
+  margin-bottom: $footer-vertical-margin;
+}
