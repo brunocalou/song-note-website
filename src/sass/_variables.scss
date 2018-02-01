@@ -18,7 +18,12 @@ $phone-screen-height: 568px;
 $phone-screen-border: 10px;
 $phone-border-radius: 50px;
 $phone-width: $phone-screen-width + 2 * $phone-screen-border;
+$phone-top-bottom-height: $phone-screen-height / 10;
 
 $small-phone-screen-width: 240px;
 $small-phone-screen-height: 426px;
 $small-phone-width: $small-phone-screen-width + 2 * $phone-screen-border;
+
+// Tablature strings
+$tablature-string-width: $phone-screen-width / 2;
+$tablature-string-height: 3px;
