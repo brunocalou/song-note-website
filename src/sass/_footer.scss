@@ -6,4 +6,8 @@ footer {
 
   margin-top: $footer-vertical-margin;
   margin-bottom: $footer-vertical-margin;
+
+  @media #{$large-and-up} {
+    margin-top: 0;
+  }
 }

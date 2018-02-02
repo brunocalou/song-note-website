@@ -4,3 +4,17 @@
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 3em;
+
+  width: $logo-container-size;
+  height: $logo-container-size;
+  
+  border-radius: 50%;
+  background-color: #fff;
+}
