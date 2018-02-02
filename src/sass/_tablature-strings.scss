@@ -18,13 +18,4 @@
     background: linear-gradient(to right, rgba(66,66,66,0) 0%,rgba(66,66,66,1) 50%,rgba(66,66,66,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00424242', endColorstr='#424242',GradientType=1 ); /* IE6-9 */
   }
-
-  &.reverse {
-    .string {
-      -moz-transform: scaleX(-1);
-      -o-transform: scaleX(-1);
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
-    }
-  }
 }
