@@ -18,7 +18,7 @@ section {
 
   margin: 0 auto;
 
-  padding-top: $section-vertical-padding  + $navbar-height;
+  padding-top: $section-vertical-padding; // + $navbar-height;
   padding-bottom: $section-vertical-padding;
 
   text-align: center;
