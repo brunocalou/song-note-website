@@ -1,9 +1,9 @@
-@import 'node_modules/materialize-css/sass/components/color';
-@import 'node_modules/materialize-css/sass/components/variables';
-@import 'node_modules/materialize-css/sass/components/typography';
-@import 'node_modules/materialize-css/sass/components/global';
-
 @import 'variables';
+
+@import './lib/customVariables';
+@import './lib/global';
+@import './lib/typography';
+
 @import 'button';
 @import 'phone';
 @import 'content';

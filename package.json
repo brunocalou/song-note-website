@@ -16,6 +16,5 @@
     "gulp-sass": "^3.1.0"
   },
   "dependencies": {
-    "materialize-css": "^0.100.2"
   }
 }
