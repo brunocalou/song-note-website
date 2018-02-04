@@ -33,4 +33,4 @@ Deploying the app is as simple as:
 
 The [Song Note website](https://brunocalou.github.io/song-note-website/) was built to be light, simple and fast.
 
-It is built with [AMP](https://www.ampproject.org/), [gulp](https://gulpjs.com/) and [SASS](https://sass-lang.com/)
+It is built with [AMP](https://www.ampproject.org/), [gulp](https://gulpjs.com/), and [SASS](https://sass-lang.com/)
