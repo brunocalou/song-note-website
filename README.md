@@ -7,6 +7,7 @@ This repo contains the website for the [Song Note](https://play.google.com/store
 ### Prerequisites
 1. Git
 1. Node
+1. Yarn (optional)
 
 ### Installation
 
@@ -14,13 +15,11 @@ This repo contains the website for the [Song Note](https://play.google.com/store
 
 ### Running locally
 
-1. `npm start` (or simply `gulp`)
+1. `npm start`
 
 ### Building for production
 
-Same as running locally. All the production files are generated during the development process
-
-1. `npm start` (or simply `gulp`)
+1. `npm run build`
 
 ### Deploying
 
@@ -28,7 +27,7 @@ The repo is configured to serve the website on the gh-pages.
 
 Deploying the app is as simple as:
 
-1. `npm run deploy` (or simply `gulp deploy`)
+1. `npm run deploy`
 
 # Overview
 
