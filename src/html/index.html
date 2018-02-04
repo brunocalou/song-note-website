@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom></style>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
   </head>
   <body>
     <section id="intro" class="intro-section content-container">
@@ -29,7 +30,13 @@
     
       <div class="phone hide-on-med-and-down">
         <div class="top"></div>
-        <div class="screen"></div>
+        <div class="screen">
+          <amp-video autoplay loop
+            width="320"
+            height="568"
+            layout="responsive">
+            <source src="assets/videos/showcase.mp4" type="video/mp4" />
+        </div>
         <div class="bottom"></div>
       </div>
     </section>
@@ -53,7 +60,13 @@
 
         <div class="phone small">
           <div class="top"></div>
-          <div class="screen"></div>
+          <div class="screen">
+            <amp-video autoplay loop
+              width="240"
+              height="426"
+              layout="responsive">
+              <source src="assets/videos/tablature.mp4" type="video/mp4" />
+          </div>
           <div class="bottom"></div>
         </div>
 
@@ -85,7 +98,13 @@
         </amp-img>
         <div class="phone small">
           <div class="top"></div>
-          <div class="screen"></div>
+          <div class="screen">
+            <amp-video autoplay loop
+              width="240"
+              height="426"
+              layout="responsive">
+              <source src="assets/videos/audio.mp4" type="video/mp4" />
+          </div>
           <div class="bottom"></div>
         </div>
         <amp-img
@@ -116,7 +135,13 @@
         
         <div class="phone small">
           <div class="top"></div>
-          <div class="screen"></div>
+          <div class="screen">
+            <amp-video autoplay loop
+              width="240"
+              height="426"
+              layout="responsive">
+              <source src="assets/videos/organize.mp4" type="video/mp4" />
+          </div>
           <div class="bottom"></div>
         </div>
         
@@ -131,14 +156,16 @@
     </section>
 
     <footer>
-      <div class="logo-container">
-        <amp-img
-          src="assets/songnote.svg"
-          alt="Get it on Google Play"
-          width="96px"
-          height="96px">
-        </amp-img>
-      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.brunocalou.songnote">
+        <div class="logo-container">
+          <amp-img
+            src="assets/songnote.svg"
+            alt="Get it on Google Play"
+            width="96px"
+            height="96px">
+          </amp-img>
+        </div>
+      </a>
       <a href="https://play.google.com/store/apps/details?id=com.brunocalou.songnote">
         <amp-img
           src="assets/get-it-on-google-play.svg"
