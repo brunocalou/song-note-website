@@ -1,16 +1,17 @@
-// As seen here: http://blog.pagepro.co/2016/11/22/creating-amp-boilerplate-with-sass/
+// Based on http://blog.pagepro.co/2016/11/22/creating-amp-boilerplate-with-sass/
 
-var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var sass = require('gulp-sass')
-var cssnano = require('gulp-cssnano')
-var fs = require('fs')
-var inject = require('gulp-inject-string')
-var browser = require('browser-sync')
-var reload = browser.reload
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const sass = require('gulp-sass')
+const cssnano = require('gulp-cssnano')
+const fs = require('fs-extra')
+const inject = require('gulp-inject-string')
+const browser = require('browser-sync')
+const reload = browser.reload
+const runSequence = require('run-sequence')
 
 gulp.task('sass', function () {
-  gulp.src('./src/sass/*.scss')
+  return gulp.src('./src/sass/*.scss')
     .pipe(plumber())
     .pipe(sass())
     .pipe(cssnano())
@@ -18,8 +19,9 @@ gulp.task('sass', function () {
 })
 
 gulp.task('html', function () {
-  var cssContent = fs.readFileSync('./dist/main.css', 'utf8')
-  gulp.src('./src/html/*.html')
+  const cssContent = fs.readFileSync('./dist/main.css', 'utf8')
+
+  return gulp.src('./src/html/*.html')
     .pipe(inject.after('style amp-custom>', cssContent))
     .pipe(gulp.dest('./dist'))
     .pipe(reload({
@@ -28,7 +30,7 @@ gulp.task('html', function () {
 })
 
 gulp.task('serve', function () {
-  browser({
+  return browser({
     port: 4500,
     open: false,
     ghostMode: false,
@@ -39,13 +41,17 @@ gulp.task('serve', function () {
 })
 
 gulp.task('assets', function () {
-  gulp.src('./src/assets/*')
+  return gulp.src('./src/assets/**')
     .pipe(gulp.dest('./dist/assets'))
 })
 
 gulp.task('favicon', function () {
-  gulp.src('./src/favicon/*')
+  return gulp.src('./src/favicon/**')
     .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('clean', function () {
+  return fs.remove('./dist/')
 })
 
 gulp.task('watch', function () {
@@ -55,4 +61,17 @@ gulp.task('watch', function () {
   gulp.watch('./src/assets/**', ['assets'])
 })
 
-gulp.task('default', ['favicon', 'assets', 'sass', 'html', 'watch', 'serve'])
+gulp.task('build', function () {
+  return runSequence(
+    'clean',
+    ['favicon', 'assets', 'sass'],
+    'html'
+  )
+})
+
+gulp.task('default', function () {
+  return runSequence(
+    'build',
+    ['watch', 'serve']
+  )
+})
