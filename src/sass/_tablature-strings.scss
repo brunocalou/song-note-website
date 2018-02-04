@@ -8,6 +8,10 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media #{$small-and-down} {
+    display: none;
+  }
+
   .string {
     width: $tablature-string-width;
     height: $tablature-string-height;

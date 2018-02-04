@@ -19,61 +19,61 @@ html {
 .hide-on-small-only,
 .hide-on-small-and-down {
   @media #{$small-and-down} {
-    display: none !important;
+    display: none;
   }
 }
 
 .hide-on-med-and-down {
   @media #{$medium-and-down} {
-    display: none !important;
+    display: none;
   }
 }
 
 .hide-on-med-and-up {
   @media #{$medium-and-up} {
-    display: none !important;
+    display: none;
   }
 }
 
 .hide-on-med-only {
   @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
-    display: none !important;
+    display: none;
   }
 }
 
 .hide-on-large-only {
   @media #{$large-and-up} {
-    display: none !important;
+    display: none;
   }
 }
 
 .show-on-large {
   @media #{$large-and-up} {
-    display: block !important;
+    display: block;
   }
 }
 
 .show-on-medium {
   @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
-    display: block !important;
+    display: block;
   }
 }
 
 .show-on-small {
   @media #{$small-and-down} {
-    display: block !important;
+    display: block;
   }
 }
 
 .show-on-medium-and-up {
   @media #{$medium-and-up} {
-    display: block !important;
+    display: block;
   }
 }
 
 .show-on-medium-and-down {
   @media #{$medium-and-down} {
-    display: block !important;
+    display: block;
   }
 } // Center text on mobile
 .center-on-small-only {

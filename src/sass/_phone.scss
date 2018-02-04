@@ -48,4 +48,10 @@
       height: $small-phone-screen-height;
     }
   }
+
+  &.hide-on-med-and-down {
+    @media #{$medium-and-down} {
+      display: none;
+    }
+  }
 }
