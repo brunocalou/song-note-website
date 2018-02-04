@@ -8,7 +8,6 @@ var fs = require('fs')
 var inject = require('gulp-inject-string')
 var browser = require('browser-sync')
 var reload = browser.reload
-var deploy = require('gulp-gh-pages')
 
 gulp.task('sass', function () {
   gulp.src('./src/sass/*.scss')
@@ -54,14 +53,6 @@ gulp.task('watch', function () {
   gulp.watch('./dist/*.css', ['html'])
   gulp.watch('./src/html/*.html', ['html'])
   gulp.watch('./src/assets/**', ['assets'])
-})
-
-/**
- * Push build to gh-pages
- */
-gulp.task('deploy', function () {
-  return gulp.src('./dist/**/*')
-    .pipe(deploy())
 })
 
 gulp.task('default', ['favicon', 'assets', 'sass', 'html', 'watch', 'serve'])
