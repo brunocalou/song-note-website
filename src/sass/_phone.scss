@@ -49,8 +49,14 @@
     }
   }
 
-  &.hide-on-med-and-down {
+  &.hide-on-med-and-down, .hide-on-med-and-down {
     @media #{$medium-and-down} {
+      display: none;
+    }
+  }
+  
+  &.hide-on-large-only, .hide-on-large-only {
+    @media #{$large-and-up} {
       display: none;
     }
   }
