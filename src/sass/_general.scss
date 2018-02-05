@@ -1,9 +1,0 @@
-html, body {
-  background-color: $bg-color;
-}
-
-* {
-  color: $text-color;
-  // Removes blue highlight on tap
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
