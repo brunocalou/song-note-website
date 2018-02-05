@@ -1,5 +1,5 @@
 .tablature-strings {
-  height: 100%;
+  height: $phone-screen-height - 6 * $tablature-string-height;
 
   padding-top: $phone-top-bottom-height;
   padding-bottom: $phone-top-bottom-height;
