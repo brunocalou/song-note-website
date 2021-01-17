@@ -45,6 +45,11 @@ gulp.task('assets', function () {
     .pipe(gulp.dest('./dist/assets'))
 })
 
+gulp.task('public', function () {
+  return gulp.src('./src/public/**')
+    .pipe(gulp.dest('./dist'))
+})
+
 gulp.task('favicon', function () {
   return gulp.src('./src/favicon/**')
     .pipe(gulp.dest('./dist'))
@@ -59,12 +64,13 @@ gulp.task('watch', function () {
   gulp.watch('./dist/*.css', ['html'])
   gulp.watch('./src/html/*.html', ['html'])
   gulp.watch('./src/assets/**', ['assets'])
+  gulp.watch('./src/public/**', ['public'])
 })
 
 gulp.task('build', function () {
   return runSequence(
     'clean',
-    ['favicon', 'assets', 'sass'],
+    ['favicon', 'assets', 'sass', 'public'],
     'html'
   )
 })
